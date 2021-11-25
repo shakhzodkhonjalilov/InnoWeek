@@ -1,0 +1,32 @@
+export default {
+  ru: {
+    title: 'СТАТИСТИКА INNOWEEK на',
+    show: 'ТОП-5 по Кол-ву участников выставки по странам',
+    country: 'Стран <br />участников',
+    participant: 'ТОП-5 по Кол-ву посетителей выставки по странам',
+    views: 'Посетителей <br />выставки',
+    languages: 'КОЛИЧЕСТВО ПОСЕТИТЕЛЕЙ ВЫСТАВКИ В РАЗРЕЗЕ ЯЗЫКОВ',
+    live: 'LIVE ТРАНСЛЯЦИИ',
+    liveTitle: 'НАЗВАНИЕ ТРАНСЛЯЦИИ',
+  },
+  uz: {
+    title: 'INNOWEEK STATISTIKASI',
+    show: "ISHTIROKCHILAR SONI BO'YICHA TOP-5 MAMLAKATLAR",
+    country: 'Ishtirokchi <br /> mamlakatlar',
+    participant: 'TASHRIFCHILARI SONI BO’YICHA TOP-5 MAMLAKATLAR',
+    views: "Ko'rgazma <br /> tashrifchilari",
+    languages: 'TILLAR KESIMIDAGI TASHRIFCHILARI SONI',
+    live: 'JONLI EFIR',
+    liveTitle: 'EFIR NOMI',
+  },
+  en: {
+    title: 'INNOWEEK STATS AT',
+    show: 'TOP-5 COUNTRIES BY THE NUMBER OF EXHIBITORS',
+    country: 'Participating <br /> countries ',
+    participant: 'TOP-5 COUNTRIES BY THE NUMBER OF VISITORS OF THE EXHIBITION',
+    views: 'Exhibition <br /> visitors',
+    languages: 'NUMBER OF VISITORS BY LANGUAGES',
+    live: 'LIVE BROADCASTING',
+    liveTitle: 'BROADCAS TITLE',
+  },
+};

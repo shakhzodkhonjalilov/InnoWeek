@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoWeek2020</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <style>
+    #app {
+      padding: 50px 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    td,
+    th {
+      border: 1px solid #eaeaea;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  <div id="app">
+    <div class="container" v-if="statics.users">
+      <h1>Статистика</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, idx) in list" :key="idx">
+            <td>{{item.text}}</td>
+            <td>
+              <div v-html="statics[item.key]"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <div class="container mt-4">
+      <h1 class="text-center">Статистика стендов</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Название стенда</th>
+            <th>Количество просмотров</th>
+            <th>Количество лайков</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="stand in stands">
+            <td>{{ stand.name }}</td>
+            <td>{{ stand.views }}</td>
+            <td>{{ stand.likes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+
+    <div class="container mt-4">
+      <div class="text-center">
+        <h1>Email рассылка</h1>
+        <div v-if="success" class="alert alert-success" role="alert">
+          Успешно отправлено!
+        </div>
+        <!-- <div class="mt-4">
+          <button class="btn btn-primary send_email" @click="sendHandler('week')">Отправить Рассылку за неделю</button>
+        </div>
+        <div class="mt-4">
+          <button class="btn btn-primary send_email" @click="sendHandler('three')">Отправить Рассылку за 3 дня</button>
+        </div>
+        <div class="mt-4">
+          <button class="btn btn-primary send_test" @click="sendHandler('today')">Отправить Рассылку в день</button>
+        </div> -->
+        <div class="mt-4">
+          <button class="btn btn-primary send_test" @click="sendHandler('result')">Отправить Рассылку о завершении</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data() {
+        return {
+          statics: {},
+          stands: [],
+          success: false,
+          list: [{
+              text: "Количество зарегистрированных посетителей выставки",
+              key: "users"
+            },
+            {
+              text: "Количество просмотров сайта",
+              key: "innoview"
+            },
+            {
+              text: "Количество просмотров выставки",
+              key: "views"
+            },
+            {
+              text: "Количество стран, из которых посетители выставки",
+              key: "countries"
+            },
+            {
+              text: "Средний возраст посетителей выставки",
+              key: "age"
+            },
+            {
+              text: "Количество посетителей выставки по полу:",
+              key: "gender"
+            },
+            {
+              text: "Количество посетителей выставки по языкам:",
+              key: "language"
+            },
+            {
+              text: "Количество посетителей выставки по странам:",
+              key: "countriesView"
+            }
+          ]
+        };
+      },
+      methods: {
+        async getStatics() {
+          const data = await fetch("https://show.innoweek.uz/api/statics");
+          const res = await data.json();
+          this.statics = {
+            ...res
+          };
+        },
+        sendHandler(type) {
+          let valid = prompt('Если действительно хотите отправить рассылку напишите "Продолжить"')
+          if (valid === "Продолжить") {
+            alert('Рассылка отправлена')
+            fetch(`https://show.innoweek.uz/api/mailing?type=${type}`)
+              .then(res => {
+                this.success = true;
+                this.fadeS();
+              })
+              .catch(e => {
+                console.log(e)
+              })
+          } else {
+            alert('Рассылка отменена')
+          }
+        },
+        fadeS() {
+          setTimeout(() => {
+            this.success = false
+          }, 3000);
+        },
+        // async getStands() {
+        //   try {
+        //     const data = await fetch(
+        //       "https://testshow.innoweek.uz/api/stand/static"
+        //     );
+        //     const static = await data.json();
+        //     this.stands = static.data;
+        //   } catch (error) {
+        //     console.log(error);
+        //   }
+        // },
+      },
+      mounted() {
+        this.getStatics();
+        // this.getStands();
+      }
+    })
+  </script>
+</body>
+
+</html>

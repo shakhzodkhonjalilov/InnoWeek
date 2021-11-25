@@ -1,0 +1,111 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none !important;
+}
+
+.header {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 86px;
+  }
+
+  &__logo {
+    width: 120px;
+    padding: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0 16px;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    transition: 0.3s ease;
+
+    &:hover,
+    &.active {
+      background: #007cb9;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.content {
+  background: url("~@/assets/images/bg.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: calc(100vh - 86px);
+  height: 100%;
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  background: #ffffff;
+  padding: 50px 40px;
+  font-size: 22px;
+  margin-bottom: 10%;
+
+  &__lang {
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #007cb9;
+    font-weight: 700;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  .btn {
+    display: block;
+    max-width: 370px;
+    width: 100%;
+    margin: auto;
+    background: #007cb8;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+
+}
+
+@import "media"

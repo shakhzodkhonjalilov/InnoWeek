@@ -1,0 +1,7 @@
+{
+  "port": 3000,
+  "mongoUri": "mongodb://localhost:27017/app",
+  "username": "nodirovich",
+  "password": "7OKgVPhN9bIaRNRD",
+  "jwtSecret": "innovation 360"
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1 class="text-center">Socket io</h1>
+  <div class="container py-4">
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet rerum iure exercitationem reiciendis et
+      consectetur architecto distinctio cum quos nemo, corrupti fuga quam at optio nam vel, repudiandae tempore eius
+      obcaecati. Natus corporis dolores nam blanditiis hic minus id at vel cum porro, iure odio voluptatum harum
+      molestias ad minima magni, tenetur repellat quo perferendis quos. Repellendus tempora enim omnis reiciendis hic
+      expedita architecto culpa? Ipsam sunt omnis eius. Autem delectus, quam rerum sequi porro eum explicabo distinctio
+      eos alias non, inventore accusantium itaque laudantium nam soluta reprehenderit quod voluptatibus, sed debitis
+      totam optio dicta? Illum obcaecati voluptate, architecto sit possimus recusandae ipsa neque nesciunt accusamus
+      velit! Harum nisi iure, accusantium quas laudantium nihil perspiciatis, id quibusdam blanditiis, natus eum! Sed
+      quaerat, eaque amet mollitia, maxime explicabo officiis quod cupiditate deleniti tempora hic dolorum? Aspernatur
+      labore possimus nam est, sed non distinctio sequi incidunt placeat. Libero harum ducimus maxime dolor quos
+      perferendis voluptatum repudiandae, magnam voluptas tenetur minus nemo cupiditate natus in, iusto fuga aut odio
+      aspernatur voluptatibus voluptate veritatis debitis, mollitia repellat laboriosam? Debitis ipsa exercitationem
+      itaque deleniti omnis quis, voluptatibus repellendus expedita laboriosam cumque excepturi animi id dolorem alias
+      totam ipsum sit? Quaerat ipsam tempore officia nostrum adipisci?</p>
+
+    <div class="row justify-content-between">
+      <div class="col-sm-3 col-6">
+        <button class="btn btn-outline-success user-1">Подписать</button>
+
+        <div class="qrcode-1 text-center mt-4 d-none">
+          QRcode
+        </div>
+      </div>
+      <div class="col-sm-3 col-6">
+        <button class="btn btn-outline-success user-2">Подписать</button>
+
+        <div class="qrcode-2 text-center mt-4 d-none">
+          QRcode
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    window.onload = function () {
+      const user1 = document.querySelector(".user-1")
+      const user2 = document.querySelector(".user-2")
+
+      const socket = io();
+
+      user1.addEventListener("click", function () {
+        socket.emit("show", "1");
+        let qr = document.querySelector(".qrcode-1")
+        qr.classList.remove('d-none')
+      })
+
+      user2.addEventListener("click", function () {
+        socket.emit("show", "2");
+        let qr = document.querySelector(".qrcode-2")
+        qr.classList.remove('d-none')
+      })
+
+      socket.on("click", (data) => {
+        let block = document.querySelector(`.qrcode-${data}`);
+        block.classList.remove('d-none')
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+@media (min-width: 1904px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header {
+    padding: 0;
+
+    &__logo {
+      height: 50px;
+    }
+
+    &__link {
+      font-size: 18px;
+    }
+  }
+
+  .top {
+    h1 {
+      font-size: 42px;
+      padding-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 30px;
+
+      span {
+        font-size: 28px;
+      }
+    }
+
+    &__text {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .application {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .big__img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .top {
+    h1 {
+      font-size: 38px;
+      padding-bottom: 40px;
+
+      &::after {
+        bottom: 20px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn__group .btn {
+      font-size: 22px;
+      line-height: 48px;
+      height: 48px;
+    }
+  }
+
+  .form {
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  .application {
+    &__agreement {
+      max-width: 80%;
+    }
+
+    .file {
+      padding: 30px 50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    padding: 20px 0;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 18px;
+
+      span {
+        font-size: 24px;
+      }
+    }
+
+    &__content {
+      padding: 40px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  .application {
+    &__title {
+      font-size: 26px;
+    }
+
+    .stands__colors.active .btn.active {
+      transform: scale(1.2);
+    }
+
+    .file__title {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    .file__requirement {
+      font-size: 14px;
+    }
+
+    .file__faq {
+      flex-direction: column;
+    }
+
+    .file__down {
+      margin-top: 15px;
+    }
+
+    .file__down label {
+      font-size: 22px;
+      line-height: 48px;
+      height: 48px;
+    }
+  }
+
+  .application__modal {
+    .modal {
+      &__body {
+        font-size: 22px;
+      }
+
+      &__title {
+        font-size: 26px;
+      }
+
+      &__number {
+        margin: 25px 0 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header__link {
+    font-size: 16px;
+  }
+
+  .top {
+    h1 {
+      font-size: 24px;
+
+      &::after {
+        width: 130px;
+      }
+    }
+
+    h2 span {
+      font-size: 22px;
+    }
+
+    &__content {
+      padding: 20px 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn__group .btn {
+      font-size: 18px;
+      line-height: 40px;
+      height: 40px;
+    }
+
+    &__scroll img {
+      width: 40px;
+    }
+  }
+
+  .application {
+    padding: 40px 0;
+
+    &__block {
+      margin-bottom: 40px;
+    }
+
+    &__agreement {
+      max-width: 95%;
+
+      a {
+        font-size: 15px;
+      }
+    }
+
+    .file {
+      padding: 30px 10px;
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__down label {
+        font-size: 20px;
+        line-height: 44px;
+        height: 44px;
+      }
+
+      &__list {
+        font-size: 14px;
+
+        &-name {
+          flex-basis: 50%;
+        }
+
+        &-error {
+          li {
+            flex-wrap: nowrap;
+            font-size: 13px;
+
+            span {
+              flex-basis: 20%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .application__modal {
+    .modal {
+      &__body {
+        font-size: 18px;
+        padding: 20px 15px;
+      }
+
+      &__title {
+        font-size: 22px;
+      }
+
+      &__number {
+        margin: 10px 0 15px;
+      }
+    }
+  }
+}

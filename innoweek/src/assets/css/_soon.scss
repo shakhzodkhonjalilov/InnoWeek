@@ -1,0 +1,21 @@
+.soon {
+  height: 100vh;
+  overflow: hidden;
+
+  .content {
+    background: url("~@/assets/images/top-bg.png") no-repeat center center;
+    background-size: cover;
+    height: calc(100vh + 50px);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 120px;
+      font-weight: 600;
+    }
+  }
+}

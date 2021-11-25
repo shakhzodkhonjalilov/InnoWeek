@@ -1,0 +1,5 @@
+{
+  "port": 8085,
+  "mongoUri": "mongodb://localhost:27017/panel",
+  "jwtSecret": "innovation_live"
+}

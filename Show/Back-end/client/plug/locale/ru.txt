@@ -1,0 +1,11 @@
+#: locale=ru
+
+## Tour
+
+### Title
+tour.name = InnoWeek2020
+
+## Media
+
+### Title
+panorama_069AF955_0B40_1C6F_419A_9960140EFEC1.label = 1

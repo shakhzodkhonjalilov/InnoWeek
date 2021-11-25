@@ -1,0 +1,200 @@
+@media screen and (max-width: 1880px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .stat {
+    &__container {
+
+      &-diagram {
+        max-width: 100%;
+        margin-bottom: 20px;
+        order: 2;
+
+        .stat__diagram {
+          height: 100%;
+          padding-bottom: 15px;
+        }
+      }
+
+      &-card {
+        max-width: 48%;
+
+        &.bottom {
+          min-width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          &>div {
+            width: 48%;
+          }
+        }
+      }
+    }
+
+    &__diagram {
+      &-content {
+        padding: 0 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .live__camera {
+    height: 300px;
+  }
+  .stat__card-content {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .stat {
+    &__container {
+      &-card {
+        max-width: 48%;
+
+        &.bottom>div {
+          width: 48%;
+        }
+      }
+    }
+
+    &__card {
+      &-content {
+        font-size: 35px;
+        padding: 5px 10px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &__diagram {
+      &-title {
+        font-size: 15px;
+      }
+
+      &-center {
+        top: 48%;
+        font-size: 35px;
+      }
+
+      &-content {
+        padding: 0 10px;
+
+        .chart {
+          max-width: 200px;
+          max-height: 200px;
+        }
+      }
+
+      &-val {
+        font-size: 25px;
+      }
+
+      &-name {
+        font-size: 15px;
+      }
+    }
+
+    .bar__item {
+      strong {
+        font-size: 35px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .page {
+    .live__camera {
+      height: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .live__camera {
+    height: 400px;
+  }
+  .page {
+    .live__camera {
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .stat {
+
+    &__container-card {
+      max-width: 100%;
+      flex-direction: column;
+
+      &.bottom>div {
+        width: 100%;
+      }
+    }
+
+    &__diagram {
+      &-title {
+        height: auto;
+        line-height: 1.2;
+        padding: 10px;
+      }
+
+      &-content {
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+          margin-top: 20px;
+        }
+      }
+
+      .chart {
+        max-width: 80%;
+        max-height: 100%;
+      }
+    }
+    .bar {
+      height: 170px;
+    }
+    .bar__item {
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+
+      strong {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .live {
+    &__camera {
+      height: 200px;
+    }
+
+    &__label {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+  }
+
+  .page {
+    .live__camera {
+      height: 220px;
+    }
+  }
+}

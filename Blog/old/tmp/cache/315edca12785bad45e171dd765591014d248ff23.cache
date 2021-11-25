@@ -1,0 +1,67 @@
+<?php return array (
+  'lifetime' => 0,
+  'data' => 
+  array (
+    'class' => 'Pastheme\\Blog\\Model\\Category',
+    'eventPrefix' => NULL,
+    'events' => 
+    array (
+    ),
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'name' => 'id',
+        'type' => 'integer',
+        'id' => true,
+        'column' => 'id',
+      ),
+      'title' => 
+      array (
+        'name' => 'title',
+        'type' => 'string',
+        'column' => 'title',
+      ),
+      'slug' => 
+      array (
+        'name' => 'slug',
+        'type' => 'string',
+        'column' => 'slug',
+      ),
+      'status' => 
+      array (
+        'name' => 'status',
+        'type' => 'string',
+        'column' => 'status',
+      ),
+      'date' => 
+      array (
+        'name' => 'date',
+        'type' => 'datetime',
+        'column' => 'date',
+      ),
+      'data' => 
+      array (
+        'name' => 'data',
+        'type' => 'json_array',
+        'column' => 'data',
+      ),
+    ),
+    'isMappedSuperclass' => false,
+    'relations' => 
+    array (
+      'post' => 
+      array (
+        'name' => 'post',
+        'type' => 'HasMany',
+        'targetEntity' => 'Pastheme\\Blog\\Model\\Post',
+        'keyFrom' => 'id',
+        'keyTo' => 'category_id',
+        'orderBy' => 
+        array (
+        ),
+      ),
+    ),
+    'table' => '@dpnblog_category',
+  ),
+);

@@ -1,0 +1,126 @@
+<?php return array (
+  'lifetime' => 0,
+  'data' => 
+  array (
+    'class' => 'Pastheme\\Blog\\Model\\Post',
+    'eventPrefix' => NULL,
+    'events' => 
+    array (
+    ),
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'name' => 'id',
+        'type' => 'integer',
+        'id' => true,
+        'column' => 'id',
+      ),
+      'title' => 
+      array (
+        'name' => 'title',
+        'type' => 'string',
+        'column' => 'title',
+      ),
+      'slug' => 
+      array (
+        'name' => 'slug',
+        'type' => 'string',
+        'column' => 'slug',
+      ),
+      'user_id' => 
+      array (
+        'name' => 'user_id',
+        'type' => 'integer',
+        'column' => 'user_id',
+      ),
+      'date' => 
+      array (
+        'name' => 'date',
+        'type' => 'datetime',
+        'column' => 'date',
+      ),
+      'content' => 
+      array (
+        'name' => 'content',
+        'type' => 'text',
+        'column' => 'content',
+      ),
+      'excerpt' => 
+      array (
+        'name' => 'excerpt',
+        'type' => 'text',
+        'column' => 'excerpt',
+      ),
+      'status' => 
+      array (
+        'name' => 'status',
+        'type' => 'smallint',
+        'column' => 'status',
+      ),
+      'comment_status' => 
+      array (
+        'name' => 'comment_status',
+        'type' => 'boolean',
+        'column' => 'comment_status',
+      ),
+      'modified' => 
+      array (
+        'name' => 'modified',
+        'type' => 'datetime',
+        'column' => 'modified',
+      ),
+      'category_id' => 
+      array (
+        'name' => 'category_id',
+        'type' => 'integer',
+        'column' => 'category_id',
+      ),
+      'post_style' => 
+      array (
+        'name' => 'post_style',
+        'type' => 'integer',
+        'column' => 'post_style',
+      ),
+      'tags' => 
+      array (
+        'name' => 'tags',
+        'type' => 'simple_array',
+        'column' => 'tags',
+      ),
+      'data' => 
+      array (
+        'name' => 'data',
+        'type' => 'json_array',
+        'column' => 'data',
+      ),
+      'roles' => 
+      array (
+        'name' => 'roles',
+        'type' => 'simple_array',
+        'column' => 'roles',
+      ),
+    ),
+    'isMappedSuperclass' => false,
+    'relations' => 
+    array (
+      'user' => 
+      array (
+        'name' => 'user',
+        'type' => 'BelongsTo',
+        'targetEntity' => 'Pagekit\\User\\Model\\User',
+        'keyFrom' => 'user_id',
+        'keyTo' => NULL,
+      ),
+      'category' => 
+      array (
+        'name' => 'category',
+        'type' => 'BelongsTo',
+        'targetEntity' => 'Pastheme\\Blog\\Model\\Category',
+        'keyFrom' => 'category_id',
+        'keyTo' => NULL,
+      ),
+    ),
+    'table' => '@dpnblog_post',
+  ),
+);

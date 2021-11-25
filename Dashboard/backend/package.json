@@ -1,0 +1,24 @@
+{
+  "name": "stat-back",
+  "version": "1.0.0",
+  "description": "Admin Panel",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "server": "cross-env NODE_ENV=development nodemon app.js"
+  },
+  "author": "Uygunkhujaev Aziz <Nodirovich.a@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  }
+}

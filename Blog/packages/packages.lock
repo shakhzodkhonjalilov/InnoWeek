@@ -1,0 +1,84 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "e07ad31ccb05104f362146bf24aa2970",
+    "content-hash": "9d49d5347270d6fc43e25149ea188208",
+    "packages": [
+        {
+            "name": "pagekit/theme-one",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://pagekit.com/package/pagekit/theme-one/1.0.1.zip",
+                "reference": null,
+                "shasum": "2acaae7558661bdf71b7cea03055069d02e8d47c"
+            },
+            "archive": {
+                "exclude": [
+                    "!/app",
+                    "!/css",
+                    "/app/assets"
+                ]
+            },
+            "type": "pagekit-theme",
+            "extra": {
+                "image": "image.jpg"
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pagekit",
+                    "email": "info@pagekit.com",
+                    "homepage": "http://pagekit.com"
+                }
+            ],
+            "description": "Pagekit's default theme."
+        },
+        {
+            "name": "pastheme/dpnblog",
+            "version": "2.1.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://pagekit.com/package/pastheme/dpnblog/2.1.4.zip",
+                "reference": null,
+                "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    "node_modules",
+                    "!/app"
+                ]
+            },
+            "type": "pagekit-extension",
+            "extra": {
+                "icon": "icon.svg",
+                "image": "image.svg",
+                "scripts": "scripts.php"
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wibuzz CO",
+                    "email": "me@wibuzz.co",
+                    "homepage": "http://wibuzz.co"
+                }
+            ],
+            "description": "An Advanced Blog Extension with some extra features."
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

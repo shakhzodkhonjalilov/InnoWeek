@@ -1,0 +1,73 @@
+export default {
+  ru: {
+    title: "Войдите, чтобы продолжить",
+    email: "Email",
+    password: "Пароль",
+    login: "Войти",
+    forgot: "Забыли пароль?",
+    newUser: "Новый пользователь?",
+    reg: "Зарегистрироваться",
+    close: "Закрыть",
+    forgotPage: {
+      title: "Восстановление пароля",
+      text: "* Укажите почту, и мы вышлем новый пароль для входа на платформу",
+      btn: "Восстановить",
+      success: "Новый пароль отправлен вам на почту",
+    },
+    support: {
+      title: "Техническая поддержка",
+      number: "Телефон горячей линии",
+      whatsapp: "Перейти в чат WhatsApp",
+      telegram: "Перейти в чат Telegram",
+      mail: "Почта техподдержки",
+    },
+  },
+  uz: {
+    title: "Kirish uchun davom eting",
+    email: "El.pochta",
+    password: "Parol (sirli kod)",
+    login: "Kirish",
+    forgot: "Parolni unutdingizmi?",
+    newUser: "Yangi foydalanuvchi?",
+    reg: "Ro'yhatdan o'tish",
+    close: "Yopish",
+    forgotPage: {
+      title: "Parolni tiklash",
+      text:
+        "* Elektron pochtangizni kiriting va biz platformaga kirish uchun yangi parol yuboramiz",
+      btn: "Tiklash",
+      success: "Elektron pochtangizga yangi parol yuborildi",
+    },
+    support: {
+      title: "Texnik yordam",
+      number: "Ishonch telefoni",
+      whatsapp: "WhatsApp chatiga o'tish",
+      telegram: "Telegram chatiga o'tish",
+      mail: "Texnik yordam pochtasi",
+    },
+  },
+  en: {
+    title: "Enter to continue",
+    email: "Email",
+    password: "Password",
+    login: "Enter",
+    forgot: "Forgot your password?",
+    newUser: "Not signed up yet?",
+    reg: "Sign up",
+    close: "Close",
+    forgotPage: {
+      title: "Password recovery",
+      text:
+        "* Enter your mail, and we will send a new password to enter the platform",
+      btn: "Restore",
+      success: "A new password has been sent to your email",
+    },
+    support: {
+      title: "Technical support",
+      number: "Hotline phone",
+      whatsapp: "Go to WhatsApp chat",
+      telegram: "Go to Telegram chat",
+      mail: "Support mail",
+    },
+  },
+};

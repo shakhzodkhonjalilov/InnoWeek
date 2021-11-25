@@ -1,0 +1,6 @@
+{
+  "port": 3000,
+  "mongoUri": "mongodb://reg_innoweek:rEg_iNNwk_pa=ss=1@127.0.0.1:34025/app",
+  "username": "reg_innoweek",
+  "jwtSecret": "innovation 360"
+}

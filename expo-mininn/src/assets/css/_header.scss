@@ -1,0 +1,41 @@
+.header {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(#3620a3, .1);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 0 !important;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0 16px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    transition: 0.3s ease;
+
+    &.active,
+    &:hover {
+      background: #160766;
+      color: #ffffff;
+    }
+  }
+}
